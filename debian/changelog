@@ -1,5 +1,11 @@
-template-repository (1.0-1) unstable; urgency=medium
+libio-compress-brotli-perl (0.004001-2) unstable; urgency=medium
 
-  * Initial release
+  * No-change source-only re-upload.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- gregor herrmann <gregoa@debian.org>  Fri, 16 Jun 2023 00:22:47 +0200
+
+libio-compress-brotli-perl (0.004001-1) unstable; urgency=low
+
+  * Initial release (closes: #1037967).
+
+ -- gregor herrmann <gregoa@debian.org>  Wed, 14 Jun 2023 23:39:22 +0200

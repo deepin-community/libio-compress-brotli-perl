@@ -1,4 +1,29 @@
 #!/usr/bin/make -f
 
+PACKAGE = $(shell dh_listpackages)
+TMP     = $(CURDIR)/debian/$(PACKAGE)
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 %:
 	dh $@
+
+# we want to use the system version of the included library,
+# so we move the dir away and move it back afterwards
+override_dh_auto_clean:
+	dh_auto_clean
+	[ ! -d $(CURDIR)/brotli/c.save ] || mv $(CURDIR)/brotli/c.save $(CURDIR)/brotli/c
+
+override_dh_auto_configure:
+	[ ! -d $(CURDIR)/brotli/c ] || mv $(CURDIR)/brotli/c $(CURDIR)/brotli/c.save
+	dh_auto_configure
+
+override_dh_auto_install:
+	dh_auto_install
+	# installed as an example
+	$(RM) -v $(TMP)/usr/bin/bro-perl
+	rmdir --parents --ignore-fail-on-non-empty --verbose $(TMP)/usr/bin
+
+override_dh_installexamples:
+	dh_installexamples
+	sed -i '1s|^#!perl|#!/usr/bin/perl|' $(TMP)/usr/share/doc/$(PACKAGE)/examples/*
