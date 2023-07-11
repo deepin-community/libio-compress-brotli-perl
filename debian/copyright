@@ -1,22 +1,79 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: template-repository
-Source: https://github.com/deepin-community/template-repository
+Source: https://metacpan.org/release/IO-Compress-Brotli
+Upstream-Contact: Marius Gavrilescu <marius@ieval.ro>
+Upstream-Name: IO-Compress-Brotli
 
 Files: *
-Copyright: 2023 Tsic404 <liuheng@deepin.org>
-License: GPL-2+
- This package is free software; you can redistribute it and/or modify
+Copyright: 2015-2018, Marius Gavrilescu <marius@ieval.ro>
+License: Artistic or GPL-1+
+
+Files: ppport.h
+Copyright: 2004-2013, Marcus Holland-Moritz <mhx-cpan@gmx.net>
+ 2001, Paul Marquess <pmqs@cpan.org> (Version 2.x)
+ 1999, Kenneth Albanowski <kjahds@kjahds.com> (Version 1.x)
+License: Artistic or GPL-1+
+
+Files: brotli/*
+Copyright: 2009, 2010, 2013-2015 by the Brotli Authors
+License: Expat
+Comment: This copyright&license information is taken from README and
+ brotli/LICENSE.
+ The indiviudal files in brotli/c/* claim
+  Copyright 20{10,13,14,15,16,17} Google Inc. All Rights Reserved.
+  Distributed under MIT license.
+ and point back to brotli/LICENSE for the license terms.
+
+Files: brotli/tests/testdata/lcet10.txt
+Copyright: none
+License: public-domain
+ This file is part of the Standard Canterbury Corpus (test data for
+ compression), c.f. e.g.
+ http://www.data-compression.info/Corpora/CanterburyCorpus/ and
+ https://corpus.canterbury.ac.nz/.
+ .
+ Another copy at http://www.searchengine.org.uk/pdfs/7/494.pdf has a legal
+ preface, stating
+ .
+  This PROJECT GUTENBERG-tm etext, like most PROJECT GUTENBERG-tm etexts, is a
+  "public domain" work distributed by Professor Michael S. Hart through the
+  Project Gutenberg Association (the "Project"). Among other things, this
+  means that no one owns a United States copyright on or for this work, …
+
+Files: debian/*
+Copyright: 2023, gregor herrmann <gregoa@debian.org>
+License: Artistic or GPL-1+
+
+License: Artistic
+ This program is free software; you can redistribute it and/or modify
+ it under the terms of the Artistic License, which comes with Perl.
+ .
+ On Debian systems, the complete text of the Artistic License can be
+ found in `/usr/share/common-licenses/Artistic'.
+
+License: GPL-1+
+ This program is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by
- the Free Software Foundation; either version 2 of the License, or
- (at your option) any later version.
+ the Free Software Foundation; either version 1, or (at your option)
+ any later version.
  .
- This package is distributed in the hope that it will be useful,
- but WITHOUT ANY WARRANTY; without even the implied warranty of
- MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- GNU General Public License for more details.
+ On Debian systems, the complete text of version 1 of the GNU General
+ Public License can be found in `/usr/share/common-licenses/GPL-1'.
+
+License: Expat
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction, including without limitation the rights
+ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ copies of the Software, and to permit persons to whom the Software is
+ furnished to do so, subject to the following conditions:
  .
- You should have received a copy of the GNU General Public License
- along with this program. If not, see <https://www.gnu.org/licenses/>
+ The above copyright notice and this permission notice shall be included in
+ all copies or substantial portions of the Software.
  .
- On Debian systems, the complete text of the GNU General
- Public License version 2 can be found in "/usr/share/common-licenses/GPL-2".
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.  IN NO EVENT SHALL THE
+ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ THE SOFTWARE.
