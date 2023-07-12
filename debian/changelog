@@ -1,3 +1,10 @@
+libio-compress-brotli-perl (0.004001-2deepin) unstable; urgency=medium
+
+  * pkgconfig-mitigation.patch: mitigation against difference between
+    pkg-config and pkgconf.
+
+ -- Tianyu Chen <sweetyfish@deepin.org>  Wed, 12 Jul 2023 11:00:52 +0800
+
 libio-compress-brotli-perl (0.004001-2) unstable; urgency=medium
 
   * No-change source-only re-upload.
