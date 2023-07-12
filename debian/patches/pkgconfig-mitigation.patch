@@ -1,0 +1,27 @@
+Description: pkg-config mitigation against pkgconf implementation
+ In Debian, pkgconf is now providing pkg-config. Adding space between $libs
+ fixes build failure.
+Author: Tianyu Chen <sweetyfish@deepin.org>
+Origin: vendor
+Bug-Deepin: https://github.com/deepin-community/libio-compress-brotli-perl/pull/1#issuecomment-1630545521
+Forwarded: not-needed
+Last-Update: 2023-07-12
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/Makefile.PL
++++ b/Makefile.PL
+@@ -5,10 +5,14 @@
+ my ( $inc, $libs );
+ my %pkg = ExtUtils::PkgConfig->find('libbrotlienc');
+ $inc    = $pkg{cflags};
++$inc   .= ' ';
+ $libs   = $pkg{libs};
++$libs  .= ' ';
+ %pkg    = ExtUtils::PkgConfig->find('libbrotlidec');
+ $inc   .= $pkg{cflags};
++$inc   .= ' ';
+ $libs  .= $pkg{libs};
++$libs  .= ' ';
+ 
+ WriteMakefile(
+ 	NAME             => 'IO::Compress::Brotli',

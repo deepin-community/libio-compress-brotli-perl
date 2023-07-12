@@ -1,1 +1,2 @@
 system-brotli.patch
+pkgconfig-mitigation.patch
